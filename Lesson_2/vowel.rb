@@ -1,12 +1,6 @@
 vowels = ['a', 'e', 'i', 'o', 'u', 'y']
-letters = ('a'..'z').to_a
-i = 0
-n = letters.size
 hash = {}
-while i <= n do
-	if vowels.include? (letters[i])
-	   hash[letters[i]] = i + 1
-	end
-	i += 1
+('a'..'z').each_with_index do |value, i|
+	hash[value] = i + 1 if vowels.include?(value)
 end
 puts hash
